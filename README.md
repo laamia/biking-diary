@@ -1,2 +1,2 @@
 # biking-diary
-Sinatra app for logging bike rides and associated feelings
+Sinatra CRUD app for logging bike rides and associated feelings.
