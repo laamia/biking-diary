@@ -1,0 +1,17 @@
+<h2>Ride #<%=@ride.id%></h2>
+<p><label>From: </label><%=@ride.from_location%></p>
+<p><label>To: </label><%=@ride.to_location%></p>
+<p><label>Distance (miles): </label><%=@ride.miles%></p>
+<p><label>Date: </label><%=@ride.day%></p>
+<label>Feelings/Memories:</label>
+<ul>
+<%@ride.feelings.each do |feeling|%>
+  <li><%=feeling.feeling_description%></li>
+<%end%>
+</ul>
+<button><a href="/rides/<%=@ride.id%>/edit">Edit Ride</a></button>
+<form action="/rides/<%=@ride.id%>/delete" method="POST">
+  <input id="hidden" type="hidden" name="_method" value="delete">
+  <input type="submit" value="Delete Ride" name="Delete Ride">
+</form>
+<button><a href="/rides">Home</a></button>

@@ -1,0 +1,7 @@
+<h2>Welcome, <%=@user.username%></h2>
+<%@user.rides.each do |ride|%>
+  <a href="/rides/<%=ride.id%>"><%="#{ride.miles} mile ride on #{ride.day.to_date}"%></a>
+  <br></br>
+<%end%>
+<button><a href="/rides/new">Create new ride</a></button>
+<button><a href="/logout">Logout</a></button>

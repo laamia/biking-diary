@@ -1,0 +1,21 @@
+<h2>Log a ride</h2>
+<form action="/rides" method="POST">
+  <label>From</label>
+  <input type="text" name="from_location">
+  <br></br>
+  <label>To</label>
+  <input type="text" name="to_location">
+  <br></br>
+  <label>Distance (miles)</label>
+  <input type="text" name="miles">
+  <br></br>
+  <label>Date</label>
+  <input type="date" name="day">
+  <br></br>
+  <label>3 Feelings or memories about your ride: </label>
+  <input type="text" name="feelings[]">
+  <input type="text" name="feelings[]">
+  <input type="text" name="feelings[]">
+  <br></br>
+  <input type="submit" name="submit" value="submit">
+</form>

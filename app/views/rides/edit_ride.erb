@@ -1,0 +1,23 @@
+<h2>Ride #<%=@ride.id%></h2>
+<form action="/rides/<%=@ride.id%>" method="POST">
+  <input type="hidden" id="hidden" name="_method" value="PATCH">
+  <label>From</label>
+  <input type="text" name="from_location" value="<%=@ride.from_location%>">
+  <br></br>
+  <label>To</label>
+  <input type="text" name="to_location" value="<%=@ride.to_location%>">
+  <br></br>
+  <label>Distance (miles)</label>
+  <input type="text" name="miles" value="<%=@ride.miles%>">
+  <br></br>
+  <label>Date</label>
+  <input type="text" name="day" value="<%=@ride.day%>">
+  <br></br>
+  <label>Feelings/Memories:</label>
+  <br></br>
+  <%@ride.feelings.each do |feeling|%>
+    <input type="text" name="feelings[]" value="<%=feeling.feeling_description%>">
+    <br></br>
+  <%end%>
+  <input type="submit" name="submit" value="submit">
+</form>
